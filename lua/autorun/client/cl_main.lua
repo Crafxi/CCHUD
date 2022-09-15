@@ -692,11 +692,7 @@ hook.Add( "OnPlayerChat", "cchud", function( ply, strText, bTeam, bDead )
     strText = string.lower( strText )
     if ( strText == "/cchud") then
         ServerIP = game.GetIPAddress()
-        if (ServerIP == "loopback" or ServerIP == "84.200.229.45:27020") then
             InGameConfig_Open()
-        else
-            chat.AddText( Red, "Naja, Scripts unerlaubt nutzen ist nicht so nice der Herr." )
-        end
         return true
     end
 end )
